@@ -14,9 +14,6 @@ resource "google_compute_instance" "gcp-vm01" {
      image = "debian-10-buster-v20200326"
    }
  }
-
-// Make sure flask is installed on all new instances for later steps
-metadata_startup_script = "sudo apt install -y figlet ; hostname | figlet > /etc/motd"
  network_interface {
    network = "default"
    }
@@ -34,9 +31,6 @@ resource "google_compute_instance" "gcp-vm02" {
      image = "debian-10-buster-v20200326"
    }
  }
-
-// Make sure flask is installed on all new instances for later steps
-metadata_startup_script = "sudo apt install -y figlet ; hostname | figlet > /etc/motd"
  network_interface {
    network = "default"
    }
